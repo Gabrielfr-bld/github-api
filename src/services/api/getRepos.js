@@ -1,7 +1,7 @@
 import response from "./baseUrl";
 
-const getRepos = async (username) => { 
-  const repos = await response.get(`users/${username}/repos`)
+const getAnyRepos = async (username, route) => { 
+  const repos = await response.get(`users/${username}/${route}`)
     .then(({data}) => {
       return data.map(({name, html_url, full_name}) => {
         return {
@@ -14,4 +14,4 @@ const getRepos = async (username) => {
   return repos;
 }
 
-export default getRepos;
+export default getAnyRepos;
