@@ -1,4 +1,4 @@
-import React, {useState}from "react";
+import React, {useCallback, useState}from "react";
 import GithubContext from "./GithubContext";
 import { response } from '../services'
 
@@ -40,7 +40,7 @@ function GithubProvider({ children }) {
 
 const value = {
   userData,
-  getUser,
+  getUser: useCallback((username) => getUser(username), []),
 }
 
   return (
