@@ -1,11 +1,11 @@
 import React from 'react'
-import { HeaderS } from './style'
+import { HeaderS, Input } from './style'
 
 
 function Header() {
   return (
     <HeaderS>
-      <input type='text' placeholder='search user...'/>
+      <Input type='text' placeholder='search user...'/>
       <button type='submit'>Search</button>
     </HeaderS>
   )
