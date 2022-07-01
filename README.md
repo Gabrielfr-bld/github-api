@@ -2,7 +2,7 @@
 
 ## Objetivo 
   
-## Available Scripts
+  Desenvolver uma aplicação front-end, que consome a API do Github para buscar usuários da plataforma e vizualizar seus perfis. 
 
 In the project directory, you can run:
 
