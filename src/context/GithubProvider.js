@@ -38,8 +38,13 @@ function GithubProvider({ children }) {
   return userData;
 }
 
+const value = {
+  userData,
+  getUser,
+}
+
   return (
-    <GithubContext.Provider>
+    <GithubContext.Provider value={value}>
       {children}
     </GithubContext.Provider>
   )
