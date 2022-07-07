@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { HeaderS, Input, Button } from './style'
+import GithubContext from '../../context/GithubContext'
 
 
 function Header() {
