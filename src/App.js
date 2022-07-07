@@ -1,12 +1,12 @@
-import { Header } from "./components";
-import { GlobalStyle } from "./global/GlobalStyle";
+import GithubProvider from "./context/GithubProvider";
+import Main from "./main/Main";
+
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-        <Header />
-    </>
+    <GithubProvider>
+      <Main />
+    </GithubProvider>
   );
 }
 
