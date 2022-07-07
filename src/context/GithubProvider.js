@@ -1,26 +1,26 @@
-import React, {useCallback, useState}from "react";
+import React, { useCallback, useState } from "react";
 import GithubContext from "./GithubContext";
 import { response } from '../services'
 
 function GithubProvider({ children }) {
 
   const [userData, setUserData] = useState({
-      id: 0,
-      avatar: '',
-      login: '',
-      name: '',
-      htmlUrl: '',
-      blog: '',
-      location: '',
-      followers: 0,
-      following: 0,
-      publicRepos: 0,
-      publicGists: 0,
+    id: 0,
+    avatar: '',
+    login: '',
+    name: '',
+    htmlUrl: '',
+    blog: '',
+    location: '',
+    followers: 0,
+    following: 0,
+    publicRepos: 0,
+    publicGists: 0,
   })
 
   const getUser = async (username) => {
     const userData = await response.get(`users/${username}`)
-      .then(({data}) => {
+      .then(({ data }) => {
         setUserData({
           id: data.id,
           avatar: data.avatar_url,
@@ -35,13 +35,13 @@ function GithubProvider({ children }) {
           publicGists: data.public_gists,
         });
       })
-  return userData;
-}
+    return userData;
+  }
 
-const value = {
-  userData,
-  getUser: useCallback((username) => getUser(username), []),
-}
+  const value = {
+    userData,
+    getUser: useCallback((username) => getUser(username), []),
+  }
 
   return (
     <GithubContext.Provider value={value}>
