@@ -1,4 +1,4 @@
-import { Header } from "../components";
+import { Layout, Profile } from "../components";
 import { GlobalStyle } from "../global/GlobalStyle";
 
 
@@ -6,7 +6,9 @@ function Main() {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Layout>
+        <Profile />
+      </Layout>
     </>
   );
 }
