@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { HeaderS, Input, Button } from './style'
 import GithubContext from '../../context/GithubContext'
 
-
 function Header() {
   const { getUser } = useContext(GithubContext)
   const [search, setSearch] = useState('')
@@ -17,8 +16,8 @@ function Header() {
 
   return (
     <HeaderS>
-      <Input type='text' placeholder='search user...'/>
-      <Button type='submit'>Search</Button>
+      <Input type='text' placeholder='search user...' onChange={handleChange} />
+      <Button type='submit' onClick={handleSubmit}>Search</Button>
     </HeaderS>
   )
 }
