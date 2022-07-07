@@ -1,3 +1,4 @@
-import Header from "./header/Header";
+import Profile from "./profile/Profile";
+import Layout from "./layout/Layout";
 
-export { Header };
+export { Profile, Layout };
