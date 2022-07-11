@@ -6,3 +6,5 @@ export const WrapperTabs = styled(Tabs)`
   width: 100%;
   margin-top: 1.2rem;
 `;
+
+WrapperTabs.tabsRole = "Tabs";
