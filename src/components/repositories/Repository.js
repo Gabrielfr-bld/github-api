@@ -20,7 +20,6 @@ function Repository() {
     }
     if (userData.login) {
       getRepos(`${userData.login}`, 'repos');
-      getRepos(`${userData.login}`, 'starred');
     }
   }, [repositories, userData.login])
 
