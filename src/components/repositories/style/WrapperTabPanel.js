@@ -11,3 +11,5 @@ export const WrapperTabPanel = styled(TabPanel)`
     display: block;
   }
 `;
+
+WrapperTabPanel.tabsRole = "TabPanel";
