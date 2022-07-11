@@ -11,6 +11,7 @@ import CardRepository from './CardRepository';
 function Repository() {
   const { userData } = useContext(GithubContext);
   const [repositories, setRepositories] = useState([]);
+  const [starred, setStarred] = useState([]);
 
   useEffect(() => {
     const getRepos = async (username) => {
