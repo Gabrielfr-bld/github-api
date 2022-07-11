@@ -7,6 +7,7 @@ export const WrapperInfo = styled.div`
   justify-content: center;
   margin-left: 1.2rem;
   height: 30vh;
+  margin-top: 2.5rem;
 
   h1 {
     font-size: 1.5rem;
@@ -15,8 +16,8 @@ export const WrapperInfo = styled.div`
   }
 
   h2 {
-    font-size: 1.2rem;
     font-size: 1rem;
+    font-weight: bold;
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
