@@ -13,15 +13,15 @@ function Repository() {
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    const getRepos = async (username, route) => {
-      const repos = await response.get(`users/${username}/${route}`)
+    const getRepos = async (username) => {
+      const repos = await response.get(`users/${username}/repos`)
         .then(({ data }) => {
           setRepositories(data);
         });
       return repos;
     }
     if (userData.login) {
-      getRepos(`${userData.login}`, 'repos');
+      getRepos(`${userData.login}`);
     }
   }, [repositories, userData.login])
 
