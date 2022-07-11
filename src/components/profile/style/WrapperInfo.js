@@ -21,4 +21,9 @@ export const WrapperInfo = styled.div`
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
   }
+
+  p {
+    font-size: 1rem;
+    margin-left: 1.2rem; 
+  }
 `
