@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import GithubContext from '../../context/GithubContext';
 import { response } from '../../services';
-import { WrapperList } from './style/WrapperList';
-import { WrapperTab } from './style/WrapperTab';
-import { WrapperTabList } from './style/WrapperTabList';
-import { WrapperTabPanel } from './style/WrapperTabPanel';
-import { WrapperTabs } from './style/WrapperTabs';
+import {
+  WrapperList,
+  WrapperTab,
+  WrapperTabList,
+  WrapperTabPanel,
+  WrapperTabs
+} from './style';
 import CardRepository from './CardRepository';
 
 function Repository() {
