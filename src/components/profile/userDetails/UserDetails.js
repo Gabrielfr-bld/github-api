@@ -8,7 +8,7 @@ function UserDetails() {
   const { userData } = useContext(GithubContext)
   return (
     <>
-      <UserName />
+      <UserName name={userData.name} />
       <UserInfo />
       <UserStatics title="Followers" count={userData.followers} />
       <UserStatics title="Followings" count={userData.following} />
