@@ -26,4 +26,9 @@ export const WrapperInfo = styled.div`
     font-size: 1rem;
     margin-left: 1.2rem; 
   }
+
+  a {
+    font-size: 1rem;
+    margin-left: 1.2rem;
+  }
 `
