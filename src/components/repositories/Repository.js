@@ -6,6 +6,7 @@ import { WrapperTab } from './style/WrapperTab';
 import { WrapperTabList } from './style/WrapperTabList';
 import { WrapperTabPanel } from './style/WrapperTabPanel';
 import { WrapperTabs } from './style/WrapperTabs';
+import CardRepository from './CardRepository';
 
 function Repository() {
   const { userData } = useContext(GithubContext);
@@ -21,7 +22,6 @@ function Repository() {
     }
     if (userData.login) {
       getRepos(`${userData.login}`, 'repos');
-      getRepos(`${userData.login}`, 'starred');
     }
   }, [repositories, userData.login])
 
@@ -36,7 +36,16 @@ function Repository() {
           <WrapperTab>Starred</WrapperTab>
         </WrapperTabList>
         <WrapperTabPanel>
-
+          <WrapperList>
+            {repositories.map(repository => (
+              <CardRepository
+                key={repository.id}
+                name={repository.name}
+                linkRepo={repository.full_name}
+                fullName={repository.full_name}
+              />
+            ))}
+          </WrapperList>
         </WrapperTabPanel>
       </WrapperTabs>
     </>
