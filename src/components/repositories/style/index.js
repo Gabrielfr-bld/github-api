@@ -4,11 +4,13 @@ import { WrapperTab } from "./RespositoryStyle/WrapperTab";
 import { WrapperTabPanel } from "./RespositoryStyle/WrapperTabPanel";
 import { WrapperTabs } from "./RespositoryStyle/WrapperTabs";
 import { WrapperCard } from "./CardRespositorStyle.js/WrapperCard";
+import { WrapperTitle } from "./CardRespositorStyle.js/WrapperTitle";
 export {
   WrapperList,
   WrapperTabList,
   WrapperTab,
   WrapperTabPanel,
   WrapperTabs,
-  WrapperCard
+  WrapperCard,
+  WrapperTitle
 };
