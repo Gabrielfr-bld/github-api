@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { GithubContext } from '../../context/GithubContext';
+import GithubContext from '../../context/GithubContext';
 import { response } from '../../services';
 
 function Repository() {
@@ -14,8 +14,10 @@ function Repository() {
         });
       return repos;
     }
-    getRepos(`${userData.login}`, 'repos');
-    getRepos(`${userData.login}`, 'starred');
+    if (userData.login) {
+      getRepos(`${userData.login}`, 'repos');
+      getRepos(`${userData.login}`, 'starred');
+    }
   }, [repositories, userData.login])
 
   return (
