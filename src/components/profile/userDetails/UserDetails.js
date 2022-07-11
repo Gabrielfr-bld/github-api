@@ -9,7 +9,7 @@ function UserDetails() {
   return (
     <>
       <UserName name={userData.name} />
-      <UserInfo />
+      <UserInfo htmlUrl={userData.htmlUrl} login={userData.login} company={userData.company} location={userData.location} blog={userData.blog} />
       <UserStatics title="Followers" count={userData.followers} />
       <UserStatics title="Followings" count={userData.following} />
       <UserStatics title="Gists" count={userData.publicGists} />
