@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import GithubContext from '../../context/GithubContext';
 import { response } from '../../services';
+import { WrapperTabs } from './style/WrapperTabs';
 
 function Repository() {
   const { userData } = useContext(GithubContext);
@@ -22,7 +23,12 @@ function Repository() {
 
   return (
     <>
+      <WrapperTabs
+        selectedTabClassName="is-selected"
+        selectedTabPanelClassName="is-selected"
+      >
 
+      </WrapperTabs>
     </>
   );
 }
