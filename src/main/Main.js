@@ -1,4 +1,4 @@
-import { Layout, Profile } from "../components";
+import { Layout, Profile, Repository } from "../components";
 import { GlobalStyle } from "../global/GlobalStyle";
 
 
@@ -8,6 +8,7 @@ function Main() {
       <GlobalStyle />
       <Layout>
         <Profile />
+        <Repository />
       </Layout>
     </>
   );
