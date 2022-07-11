@@ -1,19 +1,16 @@
-import React, { useContext } from 'react'
-import GithubContext from '../../../context/GithubContext'
+import React from 'react'
 
-
-function UserInfo() {
-  const { userData } = useContext(GithubContext)
+function UserInfo({ htmlUrl, login, company, location, blog }) {
   return (
     <div>
-      <a href={`${userData.htmlUrl}`}>
-        {userData.login}
+      <a href={`${htmlUrl}`}>
+        {login}
       </a>
       <div>
-        <h2>Company: {userData.company}</h2>
-        <h2>Location: {userData.location}</h2>
+        <h2>Company: {company}</h2>
+        <h2>Location: {location}</h2>
         <h2>Blog:</h2>
-        <a href={`${userData.blog}`}>{userData.blog}</a>
+        <a href={`${blog}`}>{blog}</a>
       </div>
     </div>
 
