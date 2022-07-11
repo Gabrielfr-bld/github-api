@@ -7,8 +7,10 @@ function UserInfo({ htmlUrl, login, company, location, blog }) {
         {login}
       </a>
       <div>
-        <h2>Company: {company}</h2>
-        <h2>Location: {location}</h2>
+        <h2>Company: </h2>
+        <p>{company}</p>
+        <h2>Location: </h2>
+        <p>{location}</p>
         <h2>Blog:</h2>
         <a href={`${blog}`}>{blog}</a>
       </div>
