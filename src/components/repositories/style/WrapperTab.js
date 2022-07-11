@@ -19,3 +19,5 @@ export const WrapperTab = styled(Tab)`
     box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.2);
   }
 `;
+
+WrapperTab.tabsRole = "Tab";
