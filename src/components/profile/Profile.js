@@ -1,10 +1,10 @@
 import React from 'react';
-import UserImage from './UserImage';
+import UserDetails from './userDetails/UserDetails';
 
 function Profile() {
   return (
     <div>
-      <UserImage />
+      <UserDetails />
     </div>
   );
 }

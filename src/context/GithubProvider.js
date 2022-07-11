@@ -27,6 +27,7 @@ function GithubProvider({ children }) {
           login: data.login,
           name: data.name,
           htmlUrl: data.html_url,
+          location: data.location,
           blog: data.blog,
           company: data.company,
           followers: data.followers,
