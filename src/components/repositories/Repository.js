@@ -24,7 +24,19 @@ function Repository() {
     if (userData.login) {
       getRepos(`${userData.login}`);
     }
-  }, [repositories, userData.login])
+
+    const getStarred = async (username) => {
+      const starred = await response.get(`users/${username}/starred`)
+        .then(({ data }) => {
+          setStarred(data);
+        });
+      return starred;
+    }
+    if (userData.login) {
+      getStarred(`${userData.login}`);
+    }
+
+  }, [starred, repositories, userData.login])
 
   return (
     <>
@@ -39,6 +51,18 @@ function Repository() {
         <WrapperTabPanel>
           <WrapperList>
             {repositories.map(repository => (
+              <CardRepository
+                key={repository.id}
+                name={repository.name}
+                linkRepo={repository.full_name}
+                fullName={repository.full_name}
+              />
+            ))}
+          </WrapperList>
+        </WrapperTabPanel>
+        <WrapperTabPanel>
+          <WrapperList>
+            {starred.map(repository => (
               <CardRepository
                 key={repository.id}
                 name={repository.name}
