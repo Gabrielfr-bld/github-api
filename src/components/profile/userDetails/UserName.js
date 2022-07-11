@@ -1,11 +1,8 @@
-import React, { useContext } from 'react'
-import GithubContext from '../../../context/GithubContext'
+import React from 'react'
 
-
-function UserName() {
-  const { userData } = useContext(GithubContext)
+function UserName({ name }) {
   return (
-    <h1>{userData.name}</h1>
+    <h1>{name}</h1>
   )
 }
 export default UserName;
