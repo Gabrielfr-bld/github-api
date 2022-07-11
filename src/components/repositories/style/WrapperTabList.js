@@ -7,3 +7,5 @@ export const WrapperTabList = styled(TabList)`
   display: flex;
   margin: 0;
 `;
+
+WrapperTabList.tabsRole = "TabList";
