@@ -3,6 +3,7 @@ import GithubContext from '../../context/GithubContext';
 import { response } from '../../services';
 import { WrapperTab } from './style/WrapperTab';
 import { WrapperTabList } from './style/WrapperTabList';
+import { WrapperTabPanel } from './style/WrapperTabPanel';
 import { WrapperTabs } from './style/WrapperTabs';
 
 function Repository() {
@@ -33,6 +34,9 @@ function Repository() {
           <WrapperTab>Repositories</WrapperTab>
           <WrapperTab>Starred</WrapperTab>
         </WrapperTabList>
+        <WrapperTabPanel>
+
+        </WrapperTabPanel>
       </WrapperTabs>
     </>
   );
