@@ -19,8 +19,10 @@ function GithubProvider({ children }) {
   })
 
   const [hasUser, setHasUser] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const getUser = async (username) => {
+    setIsLoading(true)
     const userData = await response.get(`users/${username}`)
       .then(({ data }) => {
         setHasUser(true)
@@ -38,6 +40,8 @@ function GithubProvider({ children }) {
           publicRepos: data.public_repos,
           publicGists: data.public_gists,
         });
+      }).finally(() => {
+        setIsLoading(false)
       })
     return userData;
   }
@@ -45,6 +49,7 @@ function GithubProvider({ children }) {
   const value = {
     userData,
     hasUser,
+    isLoading,
     getUser: useCallback((username) => getUser(username), []),
   }
 
