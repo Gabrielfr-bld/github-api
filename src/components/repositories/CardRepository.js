@@ -1,11 +1,11 @@
 import React from 'react';
-import { WrapperCard, WrapperTitle } from './style';
+import { WrapperCard, WrapperTitle, WrapperFullName } from './style';
 
 function CardRepository({ name, linkRepo, fullName }) {
   return (
     <WrapperCard>
       <WrapperTitle>{name}</WrapperTitle>
-      <h3>Full Name: </h3>
+      <WrapperFullName>Full Name: </WrapperFullName>
       <a href={linkRepo} target='_blank' rel='noreferrer'>{fullName}</a>
     </WrapperCard>
   );
