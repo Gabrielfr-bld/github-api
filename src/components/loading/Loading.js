@@ -1,9 +1,10 @@
 import React from 'react';
+import { WrapperLoading } from './style/WrapperLoading';
 
 function Loading() {
   return (
     <>
-      <h3>Loading...</h3>
+      <WrapperLoading>Loading...</WrapperLoading>
     </>
   )
 }
