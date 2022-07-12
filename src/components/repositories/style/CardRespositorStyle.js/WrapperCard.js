@@ -8,4 +8,5 @@ export const WrapperCard = styled.div`
   width: 20%;
   height: 15vh;
   align-content: center;
+  background-color: #0B1340;
 `;
