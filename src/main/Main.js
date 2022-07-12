@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { Layout, Profile, Repository, NoSearch } from "../components";
+import { Layout, Profile, Repository, NoSearch, Loading } from "../components";
 import { GlobalStyle } from "../global/GlobalStyle";
 import GithubContext from "../context/GithubContext";
 
 function Main() {
 
-  const { hasUser } = useContext(GithubContext);
+  const { hasUser, isLoading } = useContext(GithubContext);
 
   return (
     <>
@@ -13,8 +13,14 @@ function Main() {
       <Layout>
         {hasUser ? (
           <>
-            <Profile />
-            <Repository />
+            {isLoading ? (
+              <Loading />
+            ) : (
+              <>
+                <Profile />
+                <Repository />
+              </>
+            )}
           </>
         ) : (<NoSearch />)}
       </Layout>
