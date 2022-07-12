@@ -18,9 +18,12 @@ function GithubProvider({ children }) {
     publicGists: 0,
   })
 
+  const [hasUser, setHasUser] = useState(false)
+
   const getUser = async (username) => {
     const userData = await response.get(`users/${username}`)
       .then(({ data }) => {
+        setHasUser(true)
         setUserData({
           id: data.id,
           avatar: data.avatar_url,
@@ -41,6 +44,7 @@ function GithubProvider({ children }) {
 
   const value = {
     userData,
+    hasUser,
     getUser: useCallback((username) => getUser(username), []),
   }
 
