@@ -13,6 +13,7 @@ export const WrapperInfo = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: #6959CD;
   }
 
   h2 {
@@ -21,15 +22,18 @@ export const WrapperInfo = styled.div`
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    color: #6959CD;
   }
 
   p {
     font-size: 1rem;
     margin-left: 1.2rem; 
+    color: #808080;
   }
 
   a {
     font-size: 1rem;
     margin-left: 1.2rem;
+    color: #808080;
   }
 `

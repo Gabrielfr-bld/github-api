@@ -6,4 +6,5 @@ export const HeaderS = styled.div`
   justify-content: space-between;
   padding: 1rem;
   margin-bottom: 1rem;
+  background-color: #162780;
 `;
