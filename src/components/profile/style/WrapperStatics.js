@@ -12,5 +12,9 @@ export const WrapperStatics = styled.div`
   h4 {
     font-size: 1rem;
     font-weight: bold;
+    color: #6959CD;
+  }
+  span {
+    color: #808080;
   }
 `;
