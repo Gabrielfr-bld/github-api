@@ -6,6 +6,8 @@ import { WrapperTabs } from "./RespositoryStyle/WrapperTabs";
 import { WrapperCard } from "./CardRespositorStyle.js/WrapperCard";
 import { WrapperTitle } from "./CardRespositorStyle.js/WrapperTitle";
 import { WrapperFullName } from "./CardRespositorStyle.js/WrapperFullName";
+import { WrapperLink } from "./CardRespositorStyle.js/WrapperLink";
+
 export {
   WrapperList,
   WrapperTabList,
@@ -14,5 +16,6 @@ export {
   WrapperTabs,
   WrapperCard,
   WrapperTitle,
-  WrapperFullName
+  WrapperFullName,
+  WrapperLink
 };
